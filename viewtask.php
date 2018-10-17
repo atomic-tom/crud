@@ -65,8 +65,9 @@ if( isset($_GET["id"]) && !empty(trim($_GET["id"])) ){
  <div class="container-fluid">
   <div class="row">
    <div class="col-md-12">
-    <div class="page-header">
-        <h2>View Task</h2>
+    <div class="page-header clearfix">
+        <h2 class="pull-left">View Task</h2>
+	<?php echo "<a href='deletetask.php?id=". ($_GET['id']) ."' class='btn btn-danger pull-right'>Delete Task</a>" ?>
     </div>
 
 <table class='table table-bordered table-striped'>
@@ -89,7 +90,6 @@ if( isset($_GET["id"]) && !empty(trim($_GET["id"])) ){
    
 <?php echo "<a href='edittask.php?id=". ($_GET['id']) ."' class='btn btn-primary'>Edit Task</a>" ?>
 <a href="index.php" class="btn btn-outline-primary">Back</a>
-<?php echo "<a href='deletetask.php?id=". ($_GET['id']) ."' class='btn btn-danger'>Delete Task</a>" ?>
 
    </div>
   </div>

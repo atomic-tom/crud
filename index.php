@@ -48,7 +48,7 @@
     
     <div class="page-header clearfix">
 	<h2 class="pull-left">C.R.U.D.</h2>
-	<a href="addtask.php" class="btn btn-success pull-right">
+	<a href="addtask.php" class="btn btn-primary pull-right">
 		Add a task</a>
     </div>
 
@@ -61,12 +61,12 @@ if ( $q_res = $db_cnxn->query($q) ){
 
 	if ( $q_res->num_rows > 0 ){
 
-		echo "<table class='table table-bordered table-striped'>";
+		echo "<table class='table table-bordered table-hover table-responsive'>";
 		echo "<thead>";
 		echo "<tr>";
 		echo "<th>TASK</th>";
 		echo "<th>LAST UPDATED</th>";
-		echo "<th>ACTION</th>";
+		echo "<th></th>";
 		echo "</tr>";
 		echo "</thead>";
 		echo "<tbody>";
@@ -77,12 +77,12 @@ if ( $q_res = $db_cnxn->query($q) ){
 		 echo "<td>" . $row['create_time'] . "</td>";
 		 echo "<td>";
 		 echo "<a href='viewtask.php?id=". $row['id'] 
-			."' title='View Task' data-toggle='tooltip'><span class='glyphicon glyphicon-search'/></a>";
+			."' title='View Task' data-toggle='tooltip'><span class='btn btn-primary'/></a>";
 		 echo "<a href='edittask.php?id=". $row['id'] 
-			."' title='Edit Task' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'/></a>";
+			."' title='Edit Task' data-toggle='tooltip'><span class='btn btn-success'/></a>";
 		 echo "<a href='deletetask.php?id=". $row['id'] 
 			."' title='Delete Task' data-toggle='tooltip'>"
-			."<span class='glyphicon glyphicon-remove'/></a>";
+			."<span class='btn btn-danger'/></a>";
 		 echo "</td>";
 		 echo "</tr>";
 		}
