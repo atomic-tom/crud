@@ -2,9 +2,14 @@ A very rudimentary example of CRUD, a to-do list webapp
 
 !! Presupposes php5, php-mysqlind, apache, and mysql are pre-installed via yum or aptitude
 !!
+!! To run setup.sh, your user should be a sudoer
+!!
 !! You must have a SQL user capable of creating a database and table. Use that username
 !! as the first argument when running setup.sh . If the user you are logged-in as is the
 !! same user, you do not need to specify the username as an argument.
+!!
+!! setup.sh will explicitly tell you to enter your SQL user's password. Any other requests
+!! for passwords should be assumed to be for sudoing
 !!
 !! We assume that we can add a DirectoryIndex directive in .htaccess that apache will
 !! respect. This may not be the case depending on your set-up. If so, you will need
