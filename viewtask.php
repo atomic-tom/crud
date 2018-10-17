@@ -75,6 +75,7 @@ if( isset($_GET["id"]) && !empty(trim($_GET["id"])) ){
 <thead>
  <tr>
   <th>TASK</th>
+  <th>CREATED AT</th>
   <th>LAST UPDATED</th>
  </tr>
 </thead>
@@ -83,6 +84,7 @@ if( isset($_GET["id"]) && !empty(trim($_GET["id"])) ){
  <tr>
   <td><?php echo $this_row['task']; ?></td>
   <td><?php echo $this_row['create_time']; ?></td>
+  <td><?php echo $this_row['update_time']; ?></td>
  </tr>
 </tbody>
 

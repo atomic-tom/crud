@@ -1,4 +1,3 @@
-<!-- Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +15,7 @@
 
   <style type="text/css">
   	.wrapper{
-  	 width: 500px;
+  	 width: 1500px;
   	 margin: 0 auto;
         }
         .page-header h2{
@@ -25,6 +24,7 @@
         table tr td:last-child a{
   	 margin-right: 15px;
         }
+
   </style>
 
 
@@ -44,7 +44,7 @@
 <div class="wrapper">
  <div class="container-fluid">
   <div class="row">
-   <div class="col-md-20">
+   <div class="col-md-25">
     
     <div class="page-header clearfix">
 	<h2 class="pull-left">C.R.U.D.</h2>
@@ -60,11 +60,12 @@ $q = "select * from tasks order by create_time asc";
 if ( $q_res = $db_cnxn->query($q) ){
 
 	if ( $q_res->num_rows > 0 ){
-
+		
 		echo "<table class='table table-bordered table-hover table-responsive'>";
 		echo "<thead>";
 		echo "<tr>";
 		echo "<th>TASK</th>";
+		echo "<th>CREATED AT</th>";
 		echo "<th>LAST UPDATED</th>";
 		echo "<th></th>";
 		echo "</tr>";
@@ -75,6 +76,7 @@ if ( $q_res = $db_cnxn->query($q) ){
 		 echo "<tr>";
 		 echo "<td>" . $row['task'] . "</td>";
 		 echo "<td>" . $row['create_time'] . "</td>";
+		 echo "<td>" . $row['update_time'] . "</td>";
 		 echo "<td>";
 		 echo "<a href='viewtask.php?id=". $row['id'] 
 			."' title='View Task' data-toggle='tooltip'><span class='btn btn-primary'/></a>";
