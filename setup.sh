@@ -1,6 +1,6 @@
 #!/bin/bash
 I_AM=`whoami`
-WWW_DIR="/var/www/html/test"
+WWW_DIR="/var/www/html/crud"
 sudo mkdir $WWW_DIR
 sudo chown $I_AM:$I_AM $WWW_DIR
 
